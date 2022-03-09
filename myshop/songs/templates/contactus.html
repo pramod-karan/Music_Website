@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container-fluid">
+  <h3>Contact Us</h3>
+   Join us by giving your details in this form.
+   
+   <form name="form" action="" method=POST>
+   {% csrf_token %}
+   {{ form.as_p}}
+   <button type="submit">Submit</button><br><br>
+   </from>
+
+</div>
+{% endblock %}

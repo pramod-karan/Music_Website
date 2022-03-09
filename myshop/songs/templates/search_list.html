@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container-fluid">
+  <h3 style="text-align:center">search result</h3>
+
+ {% for i in m1 %}
+ Movie= {{i.title}} Director = {{i.director}} year ={{i.year}}
+ {% endfor %}
+
+ {% for i in m2 %}
+ Audio= {{i.title}} Movie = {{i.movie.title}} Director = {{i.director}} year ={{i.year}}
+ {% endfor %}
+
+ {% for i in m3 %}
+Video= {{i.title}} Movie = {{i.movie.title}} Director = {{i.director}} year ={{i.year}}
+ {% endfor %}
+  
+</div>
+{% endblock %}

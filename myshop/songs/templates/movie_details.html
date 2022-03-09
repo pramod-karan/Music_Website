@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container-fluid">
+  <h3>Songs in the Movies {{m.title}},  Director:{{m.director}}</h3>
+  
+  <h3>Audio Songs</h3>
+  {% for i in alist %}
+  {% if m.title == i.movie.title %}
+  <li>{{i.title}}</li>
+  {% endif %}
+  {% endfor %}  
+  
+  <h3>Video Songs</h3>
+  {% for i in vlist %}
+  {% if m.title == i.movie.title %}
+  <li>{{i.title}}</li>
+  {% endif %}
+  {% endfor %}
+  
+</div>
+{% endblock %}

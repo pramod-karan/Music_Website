@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container-fluid">
+  <h3>Movies List :</h3>
+  {% for i in mlst %}
+  <li><a href="movie_details{{i.id}}">{{i.title}}</a></li><br>
+  {% endfor %}
+  
+</div>
+{% endblock %}
